@@ -1,0 +1,19 @@
+/* font-family: 'Baloo Tamma 2', cursive; */
+
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.formstyle {
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.form-group {
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
