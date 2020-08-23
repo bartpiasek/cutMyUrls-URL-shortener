@@ -7,13 +7,53 @@ body {
 
 .formstyle {
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 15px;
     margin-left: 30%;
     margin-right: 30%;
 }
+.formstyle-top {
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.formstyle-bottom {
+    justify-content: center;
+    margin-top: 6%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
 .form-group {
     justify-content: center;
     margin-top: 5%;
     margin-left: 30%;
     margin-right: 30%;
+}
+
+/* buttons */
+.button_container {
+    justify-content: center;
+    margin-top: 6%;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+.dashboard_button_left {
+    float: left;
+}
+.dashboard_button_right {
+    float: right;
+}
+.inputstyle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.outputstyle {
+    border-color: black;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-radius: 3px;
 }
