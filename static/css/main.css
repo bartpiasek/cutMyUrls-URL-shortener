@@ -3,57 +3,57 @@
 
 body {
     font-family: 'Varela Round', sans-serif;
+   
 }
-
-.formstyle {
+.dashboardstyle {
+    margin-left: 25%;
+    margin-right: 25%;
     justify-content: center;
     margin-top: 15px;
-    margin-left: 30%;
-    margin-right: 30%;
+}
+.formstyle {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .formstyle-top {
     justify-content: center;
     margin-top: 15px;
-    margin-left: 30%;
-    margin-right: 30%;
+}
+.formstyle-mid {
+    justify-content: center;
+    margin-top: 15px;
 }
 .formstyle-bottom {
     justify-content: center;
     margin-top: 6%;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
 .form-group {
     justify-content: center;
     margin-top: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
 /* buttons */
 .button_container {
     justify-content: center;
     margin-top: 6%;
-    margin-left: 30%;
-    margin-right: 30%;
     text-align: center;
 }
-.dashboard_button_left {
+.button_left {
     float: left;
 }
-.dashboard_button_right {
+.button_right {
     float: right;
 }
-.inputstyle {
+/* .form-control {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-.outputstyle {
+} */
+/* .form-control {
     border-color: black;
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-left-width: 1px;
     border-right-width: 1px;
     border-radius: 3px;
-}
+} */

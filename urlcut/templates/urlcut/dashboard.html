@@ -3,67 +3,68 @@
 
 
 {% block content %}
-<div class="formstyle">
-    <form action="{% url 'generate' %}" method="POST">
-    {% csrf_token %}
-    <div class"formstyle">
-    <div class="input-group input-group-lg">
-        <input type="url" name="original" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Original URL">
-        <button type="submit" value="generate" class="btn btn-outline-danger btn-lg">Clear</button>
-    </div>
-    <hr>
-    {% if user.is_authenticated %}
-    <div class"formstyle">
-        <div class="input-group input-group-lg">
-            <span class="input-group-text" id="basic-addon3">http://localhost:8000/</span>
-            <input type="text" name="short" id="short" class="form-control" maxlength="6" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="input max 6 characters">
-            <button type="submit" value="generate" class="btn btn-outline-secondary btn-sm">Copy URL</button>
-        </div>
-    </div>
-    {% endif %}
-    <hr>
-    </div>
+<div class="dashboardstyle">
     <div class="formstyle">
-        <div class"button_container">
-            <div class="dashboard_button_left">
-                <button type="submit" value="generate" class="btn btn-outline-primary btn-lg">cutMyURL</button>
+        <form action="{% url 'generate' %}" method="POST">
+        {% csrf_token %}
+        <div class"formstyle">
+            <div class="input-group input-group-lg">
+                <input type="url" name="original" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Original URL">
+            </div>
+            <hr>
+            {% if user.is_authenticated %}
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="basic-addon3">http://localhost:8000/</span>
+                <input type="text" name="short" id="short" class="form-control" maxlength="5" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="your custom Url">
+                <button type="submit" value="generate" class="btn btn-outline-secondary btn-sm">Copy URL</button>
+            </div>
+            {% endif %}
+            <hr>
+        </div>
+        <div class="formstyle">
+            <div class"button_container">
+                <div class="button_left">
+                    <button type="submit" value="generate" class="btn btn-outline-primary btn-lg">cutMyURL</button>
+                </div>
             </div>
         </div>
-    </div>
-    </form>
-</div>
-<div class="formstylemid">
-<div class="formstyle-bottom">
-    <h6>Your shortened URL:</h6>
-<hr>
-</div>
-<div class="formstyle">
-{% for url in urls reversed %}
-    {% if forloop.counter == 1 %}
-    <div class="outputstyle">
-        <h6 style="text">
-            <a href="http://localhost:8000/{{ url.short_query}}">http://localhost:8000/{{ url.short_query}}</a>
-        </h6>
-    </div>
-    {% endif %}
-{% endfor %}
-</div>
-</div>
-<div class="formstyle-bottom">
-    <h4>History:</h4>
-    <hr>
-</div>
-    {% if user.is_authenticated %}
+        </form>
+        </div>
+
         <div class="formstyle">
-    {% for url in urls reversed %}
-        <h6 style="text">Short:
-            <a href="http://localhost:8000/{{ url.short_query}}">http://localhost:8000/{{ url.short_query}}</a>
-        </h6>
-        <h6 style="text">Original:
-            <a href="{{ url.original_url}}">{{url.original_url}}</a>
-        </h6>
-        <hr>
-    {% endfor %}
+            <h6>Your shortened URL:</h6>
+            <hr>
+            <div>
+            {% for url in urls reversed %}
+            {% if forloop.counter == 1 %}
+            <div class="outputstyle">
+                <h6 style="text">
+                    <a href="http://localhost:8000/{{url.short_query}}">http://localhost:8000/{{url.short_query}}</a>
+                </h6>
+            </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        <div class="formstyle">
+            <h4>History:</h4>
+            <hr>
+        </div>
+        <div class="formstyle">
+            {% if user.is_authenticated %}
+                <div class="formstyle">
+                    {% for url in urls reversed %}
+                    <h6 style="text">Short:
+                        <a href="http://localhost:8000/{{ url.short_query}}">http://localhost:8000/{{ url.short_query}}</a>
+                    </h6>
+                    <h6 style="text">Original:
+                        <a href="{{ url.original_url}}">{{url.original_url}}</a>
+                    </h6>
+                    <hr>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
 </div>
-    {% endif %}
 {% endblock content %}

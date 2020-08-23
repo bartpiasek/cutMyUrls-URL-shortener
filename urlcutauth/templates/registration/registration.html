@@ -1,5 +1,6 @@
 {% include "urlcut/base.html" %}
 {% block content %}
+<div class="dashboardstyle">
     <div class="form-group">
        <form method="POST">
        {% csrf_token %}
@@ -7,6 +8,7 @@
         <button class="btn btn-outline-light">Sign Up</button>
        </form>
     </div>
+</div>
 {% endblock content %}
 
 
